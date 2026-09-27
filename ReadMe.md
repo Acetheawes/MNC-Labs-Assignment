@@ -30,16 +30,27 @@ POST /users/add
 # Database description
 - Table: users
 - Users: 
-+---------+--------------+------+-----+---------+----------------+
-| Field   | Type         | Null | Key | Default | Extra          |
-+---------+--------------+------+-----+---------+----------------+
-| id      | int(11)      | NO   | PRI | NULL    | auto_increment |
-| fname   | varchar(100) | NO   |     | NULL    |                |
-| lname   | varchar(100) | NO   |     | NULL    |                |
-| email   | varchar(255) | NO   | UNI | NULL    |                |
-| phone   | varchar(30)  | YES  |     | NULL    |                |
-| company | varchar(150) | NO   |     | NULL    |                |
-+---------+--------------+------+-----+---------+----------------+
+# Database Description
+
+- Table: users
+- Description: Stores employee information.
+
+| Field      | Type         | Null | Key | Default | Description              |
+|------------|--------------|------|-----|---------|--------------------------|
+| id         | int(11)      | NO   | PRI | NULL    | Unique employee ID       |
+| firstName  | varchar(100) | NO   |     | NULL    | Employee's first name    |
+| lastName   | varchar(100) | NO   |     | NULL    | Employee's last name     |
+| image      | varchar(500) | YES  |     | NULL    | Profile image URL        |
+| age        | int(11)      | YES  |     | NULL    | Employee's age           |
+| gender     | varchar(50)  | YES  |     | NULL    | Employee's gender        |
+| birthDate  | date         | YES  |     | NULL    | Employee's date of birth |
+| email      | varchar(255) | NO   | UNI | NULL    | Employee's email         |
+| phone      | varchar(30)  | YES  |     | NULL    | Employee's phone number  |
+| address    | varchar(500) | YES  |     | NULL    | Full employee address    |
+| department | varchar(100) | YES  |     | NULL    | Employee's department    |
+| title      | varchar(100) | YES  |     | NULL    | Employee's job title     |
+| company    | varchar(150) | NO   |     | NULL    | Employee's company       |
+| university | varchar(200) | YES  |     | NULL    | Employee's university    |
 
 # Tech Stack
 - Frontend: React + Typescript with Vite
